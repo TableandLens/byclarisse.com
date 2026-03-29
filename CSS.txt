@@ -1,0 +1,501 @@
+*, *::before, *::after { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+:root {
+    --ink: #1a1714;
+    --paper: #f7f4ef;
+    --warm: #c9a96e;
+    --muted: #8a8278;
+    --rule: rgba(26,23,20,0.12);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    overflow-x: hidden;
+}
+
+/* ── HEADER ── */
+header {
+    position: relative;
+    border-bottom: 1px solid var(--rule);
+    padding: 0 3rem;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.4rem 0 0.8rem;
+    border-bottom: 1px solid var(--rule);
+}
+
+.issue-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    color: var(--muted);
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+.nav-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.16em;
+    color: var(--muted);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--ink); }
+
+.masthead {
+    text-align: center;
+    padding: 3.5rem 0 2.5rem;
+    position: relative;
+}
+
+.magazine-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    color: var(--warm);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 1.2rem;
+}
+
+.magazine-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: clamp(3.5rem, 8vw, 7rem);
+    line-height: 0.92;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+}
+
+.magazine-title em {
+    font-style: italic;
+    color: var(--warm);
+}
+
+.magazine-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--muted);
+    margin-top: 1.2rem;
+    letter-spacing: 0.04em;
+}
+
+.masthead-rule {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-top: 2.2rem;
+    justify-content: center;
+}
+
+.masthead-rule span {
+    height: 1px;
+    width: 80px;
+    background: var(--warm);
+    opacity: 0.5;
+}
+
+.masthead-rule .diamond {
+    width: 5px;
+    height: 5px;
+    background: var(--warm);
+    transform: rotate(45deg);
+    flex-shrink: 0;
+}
+
+/* ── HERO ── */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 80vh;
+    border-bottom: 1px solid var(--rule);
+}
+
+.hero-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.8s ease;
+}
+
+.hero-image:hover img { transform: scale(1.03); }
+
+.hero-content {
+    padding: 5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 1px solid var(--rule);
+}
+
+.hero-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.25em;
+    color: var(--warm);
+    text-transform: uppercase;
+    margin-bottom: 1.8rem;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 3.5vw, 3.4rem);
+    font-weight: 400;
+    line-height: 1.12;
+    margin-bottom: 1.5rem;
+}
+
+.hero-title em { font-style: italic; color: var(--warm); }
+
+.hero-body {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--muted);
+    max-width: 38ch;
+    margin-bottom: 2.5rem;
+}
+
+.hero-byline {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+    text-transform: uppercase;
+    border-top: 1px solid var(--rule);
+    padding-top: 1.5rem;
+}
+
+.hero-byline strong { color: var(--ink); }
+
+/* ── SECTION HEADER ── */
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 4rem 3rem 2.5rem;
+    border-bottom: 1px solid var(--rule);
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+}
+
+.section-title em { font-style: italic; color: var(--warm); }
+
+.section-count {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    text-transform: uppercase;
+}
+
+/* ── GRID ── */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.photo-item {
+    border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.photo-item:nth-child(3n) { border-right: none; }
+
+.photo-wrap {
+    position: relative;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+}
+
+.photo-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    filter: brightness(0.98);
+}
+
+.photo-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(26,23,20,0.35) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.photo-item:hover .photo-wrap img { transform: scale(1.06); }
+.photo-item:hover .photo-overlay { opacity: 1; }
+
+.photo-caption {
+    padding: 1.5rem 1.8rem 2rem;
+    border-top: 1px solid var(--rule);
+}
+
+.caption-number {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.15em;
+    color: var(--warm);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.caption-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 400;
+    margin-bottom: 0.6rem;
+    line-height: 1.25;
+}
+
+.caption-desc {
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: var(--muted);
+    font-style: italic;
+}
+
+/* ── COLOPHON / ABOUT ── */
+.colophon {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid var(--rule);
+}
+
+.colophon-left {
+    padding: 5rem 4rem;
+    border-right: 1px solid var(--rule);
+}
+
+.colophon-right {
+    padding: 5rem 4rem;
+    background: var(--ink);
+    color: var(--paper);
+}
+
+.colophon-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.25em;
+    color: var(--warm);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.colophon-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 1.2rem;
+}
+
+.colophon-name em { font-style: italic; color: var(--warm); }
+
+.colophon-bio {
+    font-size: 1rem;
+    line-height: 1.85;
+    color: var(--muted);
+    max-width: 40ch;
+}
+
+.colophon-right .colophon-label { color: var(--warm); }
+.colophon-right .colophon-name { color: var(--paper); }
+.colophon-right .colophon-bio { color: rgba(247,244,239,0.55); }
+
+.colophon-detail {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(247,244,239,0.1);
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid rgba(247,244,239,0.08);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+}
+
+.detail-row .key { color: rgba(247,244,239,0.4); text-transform: uppercase; }
+.detail-row .val { color: var(--paper); }
+
+/* ── FOOTER ── */
+footer {
+    padding: 2.5rem 3rem;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-copy {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+    text-transform: uppercase;
+}
+
+.footer-mark {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--warm);
+}
+
+/* ── LIGHTBOX ── */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(26,23,20,0.96);
+    z-index: 999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.lightbox.active { display: flex; }
+
+.lightbox-inner {
+    display: flex;
+    max-width: 1100px;
+    width: 100%;
+    gap: 0;
+    max-height: 90vh;
+}
+
+.lightbox-img {
+    flex: 1.5;
+    overflow: hidden;
+}
+
+.lightbox-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.lightbox-info {
+    flex: 1;
+    padding: 3rem 3.5rem;
+    background: var(--paper);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lb-number {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    color: var(--warm);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.lb-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+}
+
+.lb-desc {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--muted);
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.lb-credit {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+    text-transform: uppercase;
+    border-top: 1px solid var(--rule);
+    padding-top: 1.2rem;
+}
+
+.lightbox-close {
+    position: fixed;
+    top: 1.5rem;
+    right: 2rem;
+    background: none;
+    border: none;
+    color: var(--paper);
+    font-size: 1.8rem;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+
+.lightbox-close:hover { opacity: 1; }
+
+/* ── ANIMATION ── */
+.fade-up {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: none;
+}
+
+@media (max-width: 900px) {
+    .photo-grid { grid-template-columns: repeat(2, 1fr); }
+    .hero { grid-template-columns: 1fr; }
+    .hero-image { height: 55vw; }
+    .colophon { grid-template-columns: 1fr; }
+    header { padding: 0 1.5rem; }
+    .section-header { padding: 3rem 1.5rem 2rem; }
+    .nav-links { gap: 1.5rem; }
+}
