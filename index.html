@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Clarisse Kassandra — Table & Lens</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-top">
+    <span class="issue-tag">Vol. I &nbsp;·&nbsp; No. 1 &nbsp;·&nbsp; 2025</span>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+  </div>
+  <div class="masthead">
+    <span class="magazine-eyebrow">A food &amp; culture journal</span>
+    <h1 class="magazine-title">Table &amp;<br/><em>Lens</em></h1>
+    <p class="magazine-subtitle">Photography &amp; curation by Clarisse Kassandra Asignacion</p>
+    <div class="masthead-rule">
+      <span></span>
+      <div class="diamond"></div>
+      <span></span>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-image">
+    <img src="https://images.unsplash.com/photo-1495195129352-aeb325a55b65?q=80&w=2076&auto=format&fit=crop" alt="Hero Image">
+  </div>
+  <div class="hero-content">
+    <span class="hero-label">Feature Story</span>
+    <h2 class="hero-title">The <em>Quiet</em> Art of the Morning Table</h2>
+    <p class="hero-body">An exploration of light, linen, and the ritual of breaking bread in the soft hours before the world wakes.</p>
+    <div class="hero-byline">Words &amp; Visuals by <strong>C. Kassandra</strong></div>
+  </div>
+</section>
+
+<section id="gallery">
+    <div class="section-header">
+        <h2 class="section-title">Visual <em>Essays</em></h2>
+        <span class="section-count">08 Plates</span>
+    </div>
+
+    <div class="photo-grid">
+        <div class="photo-item fade-up" data-index="0">
+            <div class="photo-wrap">
+                <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=1974&auto=format&fit=crop" alt="Plate 01">
+                <div class="photo-overlay"></div>
+            </div>
+            <div class="photo-caption">
+                <span class="caption-number">01</span>
+                <h3 class="caption-title">Heirloom Citrus</h3>
+                <p class="caption-desc">Winter light catching the zest of blood oranges.</p>
+            </div>
+        </div>
+
+        <div class="photo-item fade-up" data-index="1">
+            <div class="photo-wrap">
+                <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=2070&auto=format&fit=crop" alt="Plate 02">
+                <div class="photo-overlay"></div>
+            </div>
+            <div class="photo-caption">
+                <span class="caption-number">02</span>
+                <h3 class="caption-title">Market Finds</h3>
+                <p class="caption-desc">Still life with ceramic and seasonal harvest.</p>
+            </div>
+        </div>
+
+        <div class="photo-item fade-up" data-index="2">
+            <div class="photo-wrap">
+                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070&auto=format&fit=crop" alt="Plate 03">
+                <div class="photo-overlay"></div>
+            </div>
+            <div class="photo-caption">
+                <span class="caption-number">03</span>
+                <h3 class="caption-title">The Aftermath</h3>
+                <p class="caption-desc">The beauty of a dinner well spent.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="colophon">
+    <div class="colophon-left">
+        <span class="colophon-label">About the Artist</span>
+        <h2 class="colophon-name">Clarisse <em>Kassandra</em></h2>
+        <p class="colophon-bio">A photographer and visual storyteller based in the Philippines, documenting the intersection of culinary tradition and modern minimalist aesthetics.</p>
+    </div>
+    <div class="colophon-right">
+        <span class="colophon-label">The Journal</span>
+        <h2 class="colophon-name">Table &amp; Lens</h2>
+        <p class="colophon-bio">A self-published digital journal dedicated to the quiet moments behind the lens and at the table.</p>
+        
+        <div class="colophon-detail">
+            <div class="detail-row"><span class="key">Location</span><span class="val">Manila / Remote</span></div>
+            <div class="detail-row"><span class="key">Equipment</span><span class="val">35mm / Digital Mirrorless</span></div>
+            <div class="detail-row"><span class="key">Focus</span><span class="val">Gastronomy & Light</span></div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-copy">&copy; 2025 Clarisse Kassandra</div>
+    <div class="footer-mark">Table & Lens</div>
+</footer>
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <div class="lightbox-inner">
+        <div class="lightbox-img">
+            <img id="lb-img" src="" alt="Full size">
+        </div>
+        <div class="lightbox-info">
+            <span id="lb-num" class="lb-number">00</span>
+            <h2 id="lb-title" class="lb-title">Title</h2>
+            <p id="lb-desc" class="lb-desc">Description goes here.</p>
+            <div class="lb-credit">Photography by C. Kassandra</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Data for Lightbox
+    const photoData = [
+        { title: "Heirloom Citrus", desc: "Winter light catching the zest of blood oranges." },
+        { title: "Market Finds", desc: "Still life with ceramic and seasonal harvest." },
+        { title: "The Aftermath", desc: "The beauty of a dinner well spent." }
+    ];
+
+    function openLightbox(idx) {
+        const item = document.querySelectorAll('.photo-item')[idx];
+        const img = item ? item.querySelector('img') : null;
+        const data = photoData[idx];
+        if (!data) return;
+        
+        document.getElementById('lb-img').src = img ? img.src : '';
+        document.getElementById('lb-num').textContent = String(idx + 1).padStart(2, '0');
+        document.getElementById('lb-title').textContent = data.title;
+        document.getElementById('lb-desc').textContent = data.desc;
+        document.getElementById('lightbox').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox(e) {
+        if (e && e.target !== document.getElementById('lightbox') && !e.target.classList.contains('lightbox-close')) return;
+        document.getElementById('lightbox').classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.photo-item[data-index]').forEach(item => {
+        item.addEventListener('click', () => openLightbox(+item.dataset.index));
+    });
+
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') { 
+            document.getElementById('lightbox').classList.remove('active'); 
+            document.body.style.overflow = ''; 
+        }
+    });
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.fade-up, .photo-item').forEach((el) => {
+        observer.observe(el);
+    });
+</script>
+
+</body>
+</html>
